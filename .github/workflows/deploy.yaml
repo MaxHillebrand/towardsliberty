@@ -1,0 +1,49 @@
+name: Deploy to Server
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write  # Hozzáadja az írási jogosultságot a tartalmakhoz
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '21.4.0'
+
+    - name: Install dependencies
+      run: npm install 
+      working-directory: ./.github/workflows/
+
+    - name: Run collect
+      run: npm run collect
+      working-directory: ./.github/workflows/
+
+    - name: Run nostr
+      run: npm run nostr
+      working-directory: ./.github/workflows/
+
+    - name: Add and commit changes
+      run: |
+        git config --global user.email "baligabor81@gmail.com"
+        git config --global user.name "Baligabor"
+        git add .
+        git commit -m "Add collected data"
+        git push https://${{ secrets.NEWDEPLOY }}@github.com/Baligabor/collectlinkdata.git
+    ## git push origin main
+      
+    ##- name: Deploy to GitHub
+    ##  run: |
+    ##    git config --global user.email "baligabor81@gmail.com"
+    ##    git config --global user.name "Baligabor"
+    ##    git add .
+    ##    git commit -m "Add generated files"
+    ##    git push https://${{ secrets.DEPLOYING }}@github.com/Baligabor/collectlinkdata.git

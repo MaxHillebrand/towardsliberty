@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en"  id="POS-27jLc1qpN8UXcQanHgeAsaEgLAio">
+<head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Max Hillebrand</title>
+<link href="/btcpay/main/bootstrap/bootstrap.css?v=TBugl2TtFNerj9yQQ02W_Vh2MtFcdUmw0C-_UDb6qVc" rel="stylesheet" />
+<link href="/btcpay/vendor/font-awesome/css/font-awesome.css?v=xB7IpSGaNhZ4b_uA4GMXrfm02jTy6epC65yhQFhqIwE" rel="stylesheet" />
+<link href="/btcpay/vendor/flatpickr/flatpickr.css?v=aTEDpz7abtWGeUQOzwxEDvFBy2H0_-4YlhmGHbTbU4Q" rel="stylesheet" />
+<link href="/btcpay/main/fonts/OpenSans.css?v=5or0eXX_npKCPPnU9xra_vLu1Z6CkpExoyK3FcrhT0E" rel="stylesheet" />
+<link href="/btcpay/main/layout.css?v=zh_DtY7b4ApEPDbWlysL8FB_fN33iJISauftk7ZShEY" rel="stylesheet" />
+<link href="/btcpay/main/site.css?v=kKtKgjrVb3GPCq4hGWKG5u2L343_YvK9Sdx7spnyMrc" rel="stylesheet" />
+
+
+<script nonce="43e270d28d3f5128a8cefb4905c3e137">if (window.localStorage.getItem('btcpay-hide-sensitive-info') === 'true') { document.documentElement.setAttribute('data-hide-sensitive-info', 'true')}</script>
+    <link href="/btcpay/main/themes/default.css?v=h4rFfOQLTqp54puObFF5fet2ySt5rVcbQ7tBNAv7xvQ" rel="stylesheet" />
+    <link href="/btcpay/main/themes/default-dark.css?v=oZbmHsUytKCXWh1vLiI0kB1DUSGa_sUEx3N3CrIpY-0" rel="stylesheet" id="DarkThemeLinkTag" />
+    <script src="/btcpay/js/theme-switch.js?v=FD4J-7Hw_Q1BpQRNQrv3VMtgBJy9_rjJOQLjWsV03dQ"></script>
+    <noscript><style>.btcpay-theme-switch { display: none !important; }</style></noscript>
+
+
+        <link href="https://towardsliberty.com/btcpay/LocalStorage/b776cc01-153c-43bf-a09c-2660301e2fa6-customdonate.css" rel="stylesheet" />
+
+<noscript>
+    <style>
+        .hide-when-js { display: block !important; }
+        .only-for-js { display: none !important; }
+    </style>
+</noscript>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-startup-image" href="/btcpay/img/splash.png">
+    <link rel="manifest" href="data:application/manifest&#x2B;json,{&quot;name&quot;:&quot;BTCPay Server: Max Hillebrand&quot;,&quot;short_name&quot;:&quot;Max Hillebrand&quot;,&quot;background_color&quot;:&quot;white&quot;,&quot;display&quot;:&quot;standalone&quot;,&quot;icons&quot;:[{&quot;src&quot;:&quot;https://towardsliberty.com/btcpay/img/icons/icon-72x72.png&quot;,&quot;sizes&quot;:&quot;72x72&quot;,&quot;type&quot;:&quot;image/png&quot;},{&quot;src&quot;:&quot;https://towardsliberty.com/btcpay/img/icons/icon-96x96.png&quot;,&quot;sizes&quot;:&quot;96x96&quot;,&quot;type&quot;:&quot;image/png&quot;},{&quot;src&quot;:&quot;https://towardsliberty.com/btcpay/img/icons/icon-128x128.png&quot;,&quot;sizes&quot;:&quot;128x128&quot;,&quot;type&quot;:&quot;image/png&quot;},{&quot;src&quot;:&quot;https://towardsliberty.com/btcpay/img/icons/icon-144x144.png&quot;,&quot;sizes&quot;:&quot;144x144&quot;,&quot;type&quot;:&quot;image/png&quot;},{&quot;src&quot;:&quot;https://towardsliberty.com/btcpay/img/icons/icon-152x152.png&quot;,&quot;sizes&quot;:&quot;152x152&quot;,&quot;type&quot;:&quot;image/png&quot;},{&quot;src&quot;:&quot;https://towardsliberty.com/btcpay/img/icons/icon-192x192.png&quot;,&quot;sizes&quot;:&quot;192x192&quot;,&quot;type&quot;:&quot;image/png&quot;},{&quot;src&quot;:&quot;https://towardsliberty.com/btcpay/img/icons/icon-384x384.png&quot;,&quot;sizes&quot;:&quot;384x384&quot;,&quot;type&quot;:&quot;image/png&quot;},{&quot;src&quot;:&quot;https://towardsliberty.com/btcpay/img/icons/icon-512x512.png&quot;,&quot;sizes&quot;:&quot;512x512&quot;,&quot;type&quot;:&quot;image/png&quot;}],&quot;splash_pages&quot;:null}">
+    <link href="/btcpay/pos/common.css?v=MaPjMczt8cuBC5rmkrMYUc9YsoLajV7m2EW1PXXmYQ8" rel="stylesheet" />
+    
+</head>
+<body class="min-vh-100">
+    
+<div id="PosStatic" class="public-page-wrap">
+    <header class="store-header" v-pre>
+    <h1 class="store-name">Max Hillebrand</h1>
+</header>
+
+    <main>
+        
+
+            <div class="lead"><h6><span style="font-weight: normal">|| </span><a href="https://towardsliberty.com/donate">Max Hillebrand</a><span style="font-weight: normal">&nbsp; || </span><a href="https://towardsliberty.com/contact">Contact</a><span style="font-weight: normal"> </span><span style="font-weight: normal">||</span>&nbsp;<a href="https://web.archive.org/web/20200627112945/http://towardsliberty.com/" target="_blank" style="background-color: var(--btcpay-bg-tile); font-family: var(--btcpay-body-font-family); font-size: 16px; text-align: center">Archive</a><span style="background-color: var(--btcpay-bg-tile); color: var(--btcpay-body-color); font-family: var(--btcpay-body-font-family); font-weight: var(--btcpay-body-font-weight); font-size: 16px; text-align: center">&nbsp;||</span></h6><h6><span style="font-weight: normal"></span></h6><h6><img style="width: 25%" src="https://towardsliberty.com/btcpay/LocalStorage/eb3b7d47-b4b7-4baa-91b4-907391aea149-agora full text red on trans.png" class="img-fluid"><img style="width: 25%" src="https://towardsliberty.com/btcpay/LocalStorage/78c3ec91-80fd-465c-8eca-4803c02c4164-agora wolf red on trans.png" class="img-fluid"></h6><h4>Free Software Entrepreneur ~ Fixing the Money<br></h4><h6>PGP: <a href="https://towardsliberty.com/btcpay/LocalStorage/650fa919-4292-4f59-9ccd-18ab0209b674-pgp_pubkey_maxhillebrand_0x0f010959e6c5120c.asc" target="_blank">5722 3FE1 FF39 BB1E 3FEA&nbsp; 6694 0F01 0959 E6C5 120C</a></h6>I'm contributing to several free software projects, and as these tools of cyberspace are fundamentally non-scarce, I share my work free for anyone to use.<br>My focus is on creating a second realm with a sound monetary economy in which sovereign individuals can pursue their entrepreneurial action.<br><br><h4>Some of the projects I contribute to<br></h4><p><br><a href="https://github.com/bitcoin/bitcoin" target="_blank">Bitcoin</a> || <a href="https://github.com/zkSNACKs/WalletWasabi" target="_blank">Wasabi Wallet</a> || <a href="https://github.com/JoinMarket-Org/JoinMarket-clientserver" target="_blank">JoinMarket</a> || <a href="https://github.com/BTCPayServer/BTCPayServer" target="_blank">BTC Pay Server</a>&nbsp; || <a href="https://github.com/bisq-network/bisq" target="_blank">BISQ</a> || <a href="https://github.com/ColdCard" target="_blank">Cold Card</a> || <a href="https://github.com/lightningnetwork/lnd" target="_blank">LND</a> || <a href="https://github.com/Kixunil/cryptoanarchy-deb-repo-builder/" target="_blank">Cryptoanarchy Debian Repository</a></p><h4><font color="#B80000" style="--darkreader-inline-color: #ff4b4b"><span style="background-color: rgba(0, 0, 0, 0); --darkreader-inline-bgcolor: transparent">Donate</span></font> to support my contributions to Free Software!<br></h4></div>
+        <div class="row row-cols row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="PosItems">
+                <div class="col posItem posItem--displayed posItem--first posItem--last">
+                    <div class="card h-100 px-0" data-id="0">
+                        <div class="card-body p-3 d-flex flex-column gap-2 mb-auto">
+                            <h5 class="card-title m-0">Donate</h5>
+                            <div class="d-flex gap-2 align-items-center">
+                                    <span class="fw-semibold">1 sats minimum</span>
+                            </div>
+                                <p class="card-text">If you value my work, toss me some sats to support my further contributions to free software.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                                <form method="post" autocomplete="off" action="/btcpay/apps/27jLc1qpN8UXcQanHgeAsaEgLAio/pos">
+                                    <input type="hidden" name="requiresRefundEmail" value="InheritFromStore" />
+                                    <input type="hidden" name="choiceKey" value="Donate" />
+                                        <div class="input-group mb-2">
+                                            <span class="input-group-text">sats</span>
+                                            <input class="form-control" type="number" min="1" step="1" name="amount" placeholder="Amount" value="1" required>
+                                        </div>
+                                    <button class="btn btn-primary w-100" type="submit">Donate 1 sats minimum</button>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </main>
+    <footer class="store-footer">
+        <a class="store-powered-by" href="https://btcpayserver.org" target="_blank" rel="noreferrer noopener">
+            Powered by <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 84" role="img" alt="BTCPay Server"><path d="M5.206 83.433a4.86 4.86 0 01-4.859-4.861V5.431a4.86 4.86 0 119.719 0v73.141a4.861 4.861 0 01-4.86 4.861" fill="currentColor" class="logo-brand-light"/><path d="M5.209 83.433a4.862 4.862 0 01-2.086-9.253L32.43 60.274 2.323 38.093a4.861 4.861 0 015.766-7.826l36.647 26.999a4.864 4.864 0 01-.799 8.306L7.289 82.964a4.866 4.866 0 01-2.08.469" fill="currentColor" class="logo-brand-medium"/><path d="M5.211 54.684a4.86 4.86 0 01-2.887-8.774L32.43 23.73 3.123 9.821a4.861 4.861 0 014.166-8.784l36.648 17.394a4.86 4.86 0 01.799 8.305l-36.647 27a4.844 4.844 0 01-2.878.948" fill="currentColor" class="logo-brand-light"/><path d="M10.066 31.725v20.553L24.01 42.006z" fill="currentColor" class="logo-brand-dark"/><path d="M10.066 5.431A4.861 4.861 0 005.206.57 4.86 4.86 0 00.347 5.431v61.165h9.72V5.431h-.001z" fill="currentColor" class="logo-brand-light"/><path d="M74.355 41.412c3.114.884 4.84 3.704 4.84 7.238 0 5.513-3.368 8.082-7.955 8.082H60.761V27.271h9.259c4.504 0 7.997 2.146 7.997 7.743 0 2.821-1.179 5.43-3.662 6.398m-4.293-.716c3.324 0 6.018-1.179 6.018-5.724 0-4.586-2.776-5.808-6.145-5.808h-7.197v11.531h7.324v.001zm1.052 14.099c3.366 0 6.06-1.768 6.06-6.145 0-4.713-3.072-6.144-6.901-6.144h-7.534v12.288h8.375v.001zM98.893 27.271v1.81h-8.122v27.651h-1.979V29.081h-8.123v-1.81zM112.738 26.85c5.01 0 9.554 2.524 10.987 8.543h-1.895c-1.348-4.923-5.303-6.732-9.134-6.732-6.944 0-10.605 5.681-10.605 13.341 0 8.08 3.661 13.256 10.646 13.256 4.125 0 7.828-1.85 9.26-7.279h1.895c-1.264 6.271-6.229 9.174-11.154 9.174-7.87 0-12.583-5.808-12.583-15.15 0-8.966 4.969-15.153 12.583-15.153M138.709 27.271c5.091 0 8.795 3.326 8.795 9.764 0 6.06-3.704 9.722-8.795 9.722h-7.746v9.976h-1.935V27.271h9.681zm0 17.549c3.745 0 6.816-2.397 6.816-7.827 0-5.429-2.947-7.869-6.816-7.869h-7.746V44.82h7.746zM147.841 56.732v-.255l11.741-29.29h.885l11.615 29.29v.255h-2.062l-3.322-8.501H153.27l-3.324 8.501h-2.105zm12.164-26.052l-6.059 15.697h12.078l-6.019-15.697zM189.551 27.271h2.104v.293l-9.176 16.92v12.248h-2.02V44.484l-9.216-16.961v-.252h2.147l3.997 7.492 4.043 7.786h.04l4.081-7.786z" fill="currentColor" class="logo-brand-text"/></svg>
+
+        </a>
+    </footer>
+</div>
+
+    <script src="/btcpay/vendor/jquery/jquery.min.js?v=_xUj-3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej_m4"></script>
+<script src="/btcpay/vendor/bootstrap/bootstrap.bundle.min.js?v=gvZPYrsDwbwYJLD5yeBfcNujPhRoGOY831wwbIzz3t0"></script>
+<script src="/btcpay/vendor/moment/moment.min.js?v=4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ"></script>
+<script src="/btcpay/vendor/flatpickr/flatpickr.js?v=8JjFd2_SowFyDnEwKGCXnvEUEMOYRuk9wPYg-ghhTwo"></script>
+<script src="/btcpay/js/copy-to-clipboard.js?v=lho4xrCkpelqYqaGpMno6HZ5QTxa75Aahe9bcpcLBbs"></script>
+<script src="/btcpay/main/utils.js?v=ToSxgtOUeg-e5IFuZY6Ka8uZepHx21E1QcUfvRnK8PA"></script>
+<script src="/btcpay/main/site.js?v=ADUJuHtalyTg3h61jk6VnMFmATnte1zGHUea2OxBcYk"></script>
+
+    
+</body>
+</html>

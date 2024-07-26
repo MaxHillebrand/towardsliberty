@@ -1,0 +1,190 @@
+:root {
+    --primary-color: #b80000;
+}
+body {
+    background: #000;
+    color: #fff;
+    font-family: monospace;
+}
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+#contact p {
+    word-break: break-all;
+}
+.logo {
+    height: 100px;
+}
+.box {
+    margin-bottom: 30px;
+    position: relative;
+}
+.box-image {
+    --aspect-ratio: 16/9;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 20px;
+    background: #333;
+    overflow: hidden;
+}
+.box-image:before {
+    content: "";
+    display: block;
+    padding-bottom: calc(100%/(var(--aspect-ratio)));
+}
+.box-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.box:hover .box-image img {
+    transform: scale(1.1);
+}
+.box:hover .box-title {
+    color: var(--primary-color);
+}
+.box:hover .nostr-date {
+    color: var(--primary-color);
+}
+.nostr-date {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 10px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.box-title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 10px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.box-description {
+    opacity: 0.8;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.btn-secondary, .filters .form-control, .select2-container--default .select2-selection--multiple {
+    background: #000 !important;
+    border-color: #666 !important;
+    color: #fff !important;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+}
+.select2-container .select2-search--inline .select2-search__field {
+    font-family: monospace;
+    color: #fff !important;
+    margin-top: 0;
+    margin-left: 0;
+    height: 23px;
+}
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+    border-bottom-left-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
+.select2-dropdown {
+    background-color: #000;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: var(--primary-color);
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: transparent;
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 5px;
+}
+.search .form-control::placeholder {
+    color: #666;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+.btn-primary {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+.btn-primary:hover {
+    background: #000;
+    color: #aaa;
+}
+.card {
+    color: #fff;
+    background: transparent;
+    border: 1px solid var(--primary-color);
+}
+.content {
+    margin: 40px 0;
+}
+.border-top, .border-bottom {
+    border-color: #666 !important;
+}
+.tag {
+    background: #333;
+    color: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-right: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+.box-meta {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.pagination-button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: #000;
+    border-color: #666;
+    color: #fff;
+}
+.pagination-button:hover {
+    background: #666;
+    border-color: #666;
+    color: #fff;
+}
+.pagination-button.active {
+    background-color: #333;
+}
+footer {} @media only screen and (max-width: 600px) {
+    .box-image {
+        width: 130px;
+    }
+}

@@ -1,0 +1,884 @@
+[
+  {
+    "content": "I am free, no matter what rules surround me. If I find them tolerable, I tolerate them; if I find them too obnoxious, I break them. I am free because I know that I alone am morally responsible for everything I do.\n\n\nRobert A. Heinlein",
+    "timestamp": "1721892652",
+    "date": "7/25/2024, 7:30:52 AM",
+    "id": "0304a3b2760c613510d76861baec18faf212cd86cf3fb2f3523220f039ebb41e",
+    "kind": 6
+  },
+  {
+    "content": "We did another round of remastering the sound of chapter 1, it's ready for upload now, should be available soon. ",
+    "timestamp": "1721839153",
+    "date": "7/24/2024, 4:39:13 PM",
+    "id": "a75c43b385a3138c207f4153713fe065258331699daed5857e0b75e60bd99523",
+    "kind": 1
+  },
+  {
+    "content": "“We’re all bored now. But has it ever occurred to you, Wally, that the process that creates this boredom that we see in the world now may very well be a self-perpetuating unconscious form of brainwashing created by a world totalitarian government based on money and that all of this is much more dangerous than one thinks and it’s not just a question of individual survival, Wally, but that somebody who’s bored is asleep and somebody who’s asleep will not say no?” - Andre Gregory in 1981’s My Dinner With Andre\n\nWatch the whole clip at https://www.youtube.com/watch?v=MEkYwYSVAl8\n\n nostr:npub1hqaz3dlyuhfqhktqchawke39l92jj9nt30dsgh2zvd9z7dv3j3gqpkt56s\n\nhttps://m.primal.net/JccK.mp4 ",
+    "timestamp": "1721828024",
+    "date": "7/24/2024, 1:33:44 PM",
+    "id": "ff9e74bdae2d687a6b880f143ac5895794352a0d98a4746bff0434d28bc82a86",
+    "kind": 6
+  },
+  {
+    "content": "I’m halfway through and already considering re-reading and publishing some sort of long form review…\n\nIt’s not high literature from a technical point of view imo, but I’m really struck by some deep passages that put into words things in me I’ve not been able (or perhaps too ashamed) to express before. Definitely a must read for bitcoiners and nostriches who want to build!",
+    "timestamp": "1721823036",
+    "date": "7/24/2024, 12:10:36 PM",
+    "id": "ad6b85c0b24fc45ab28085adbc3929e2ad1c5bbfb3ff72d3dcdf13122779af3e",
+    "kind": 6
+  },
+  {
+    "content": "Nice, let me know how you like it. ",
+    "timestamp": "1721815388",
+    "date": "7/24/2024, 10:03:08 AM",
+    "id": "2bdfd883a28d608af5f842892ca55d0a3b673ad32623bca80dd3a0dbe3067623",
+    "kind": 1
+  },
+  {
+    "content": "Reading A Lodging of Wayfaring Men thanks to nostr:npub1klkk3vrzme455yh9rl2jshq7rc8dpegj3ndf82c3ks2sk40dxt7qulx3vt 😎👊🏻",
+    "timestamp": "1721815352",
+    "date": "7/24/2024, 10:02:32 AM",
+    "id": "74c6ee957831578143d1f563eda7738ec2d509093f1846708f30c2abec09cd14",
+    "kind": 6
+  },
+  {
+    "content": "NWS works with and without encrypted transport. There are lots of different flavors to explore. \n\nWhen used without encryption, the entry node must be run by the user themselves because public entry nodes would be able to listen in otherwise. Two options in those cases: run the entry node locally in tandem with your (unmodified) client, or skip the entry node and modify the client so that data is sent through nostr to the exit node directly (the client is the entry node).\n\nWhen used with encryption, the entry node can also be public. If the encryption doesn't rely on certificate authorities, it just works. You have to make sure you're talking to the right person, but that problem is as old as computer science. For example, ssh will ask you to confirm the fingerprint of the server when you connect.\n\nIf the encryption is https and the certificate was issued for a normal domain, your browser will complain (do you trust this website?) and the user will have to say \"let me pass, even if insecure\". Without ugly hacks (issuing your own root cert for example), I don't know ways to circumvent this. Note that Tor services doen't support https and they don't have to since transport is always Sphinx-encrypted (even hidden from the entry node).\n\nHow do you make sure you're talking to the right server if you use https? Couldn't the entry node just send your traffic somewhete else? We can actually do something that is unique to Nostr here: the exit node can publish its own TLS certificate on nostr and sign it. That's right, you don't need an authority to do that for you if you remain within the NWS system. Clients can fetch the cert from nostr before talking to the entry node and verify against that cert. \n\nHere is another cool part that we haven't talked about yet: the exit node can also be configured to reach the global Internet and not only a local service (we call this NWS v2). In those cases, NWS can be used a bit like a VPN. You can type \"https google dot com\" in your browser and your encrypted traffic would flow from your machine to the entry node, to the exit node, then to Google and back to you. on those cases, nobody complains about the certificate because everything is fine.\n\n\nExciting shit. Gm.",
+    "timestamp": "1721728731",
+    "date": "7/23/2024, 9:58:51 AM",
+    "id": "536fa1516047e17a3b696f30521e4e28ae0b240851e034b0262221aa35d03893",
+    "kind": 6
+  },
+  {
+    "content": "These details should tell you that if you consider these types of groups (sophisticated adversaries with limitless physical access) as a part of your threat model, then you should:\n\n- Use the most recent phone you possibly can\n\n- Upgrade your phone to the newest possible generation as soon as possible after release if you can help it.\n\n- Use the latest version of GrapheneOS ASAP. Do not delay.\n\n- Use a strong, high entropy passphrase to make bruteforcing the device credential impossible if secure element is ever exploited.\n\n- Set GrapheneOS auto reboot time accordingly so encrypted data goes back at rest when the phone reboots, which makes AFU exploitation impossible. The lower the better.\n\n- Enable duress password. Set it to something easy to trigger but not easy to misfire.\n\n- Turn your phone off in a high risk situation, and trigger duress when in a duress situation.\n\n- Disable your radios when not using them (turn off Wi-Fi, use airplane mode, disable NFC, UWB etc.) for attack surface reduction.\n\n- Set an appropriate USB port control or disable the USB port so they aren't able to connect a device to it.\n\n- Use user profiles (application data and user files within profiles are stored encrypted with separate credentials).\n\n- Enable upcoming GrapheneOS security features like second factor authentication unlock when they come out.\n\n- Communicate only over secure messaging. Some apps like Molly (Signal fork) have features to encrypt the app storage with a passphrase, which access to that app's data impossible even when a profile is compromised  providing the passphrase is secure enough.\n\n- Become disassociated to data. Learn to only keep files or other data as long as it is necessary. If you have no use for them for a long time, then back it up elsewhere, encrypted. Delete anything you don't have a use for in the present. Your data is not your memories. \n\n- Remember that you are only as secure as the people you trust. If they do not meet your safety or security requirements, don't enable them to do things that could cause trouble.\n\nnostr:nevent1qqs8uxurjncnpj8uyzqy5gd3lyevzd8u92xhk2xe9fdln5y03hgwrwgpz4mhxue69uhhyetvv9ujumn0wd68ytnzvuhsygxptfdxtxrw026pxn0w82u9y4x6t3w5kp883d83djpgxuvj6d23s5psgqqqqqqsgwaf3p",
+    "timestamp": "1721559098",
+    "date": "7/21/2024, 10:51:38 AM",
+    "id": "d6639eab76656e390f9cfdbfc46b26a619a1bfeae297c4b3b9b1b61b8ba97e8c",
+    "kind": 6
+  },
+  {
+    "content": "\nhttps://image.nostr.build/99a96c477a110cba1b25d975cd91d0c1330ce6d31d957e5b69808d53dbb29993.jpg",
+    "timestamp": "1721557554",
+    "date": "7/21/2024, 10:25:54 AM",
+    "id": "5d8a781100b43ceb6a2ac6674d3cfd4f9218f26fb0ac3b3fdd8dd1b55ccb6503",
+    "kind": 6
+  },
+  {
+    "content": "One of the fascinating parts of A Lodging of Wayfaring Men is this characterization of Jesus as a culmination of numerous traditions developing the ideas of individual sovereignty. \n\n\"So, into this mix comes the monotheist’s enthronement of the individual above the collective; the Greek ideas of men being great enough to approach the gods on their own – with no priesthood between – and even to challenge the gods; the Jewish and Greek high regard for reason and meaning; Hillel’s teaching of the power of integrity; and the Essene discovery that definite commitment has magic in it.\"",
+    "timestamp": "1721494763",
+    "date": "7/20/2024, 4:59:23 PM",
+    "id": "20d08efac6bd4b664484d16894b3486f10a25ade369d47ede8f28f43942524c6",
+    "kind": 1
+  },
+  {
+    "content": "Production versus Plunder is an fascinating history of human kind by Paul Rosenberg\n\nhttps://freemansperspective.com/product/production-versus-plunder-e-book/",
+    "timestamp": "1721494092",
+    "date": "7/20/2024, 4:48:12 PM",
+    "id": "6a2487d709b4d3c0dbfba4b8f7c13f97eb4c7d6b1090b67f19ac1fd278f667fa",
+    "kind": 1
+  },
+  {
+    "content": "I'm not sure how key rotation would work in the 1-of-n setting... ",
+    "timestamp": "1721417941",
+    "date": "7/19/2024, 7:39:01 PM",
+    "id": "d8166c2fd3e08ac103c7a2d0e1a7debb0c828ee928367074e0cc25bc89e9d35f",
+    "kind": 1
+  },
+  {
+    "content": "Nostr just doing it’s thing. \nSpreading freedom around the world. \n\n#Prague\nhttps://m.primal.net/JWih.mov",
+    "timestamp": "1721417357",
+    "date": "7/19/2024, 7:29:17 PM",
+    "id": "80dd6ed46939b559f4fef5c7d0f7153f93be8d6f75e239d9ee9574e310d7100e",
+    "kind": 6
+  },
+  {
+    "content": "# A Declaration of Separation\n\n## To The Governments & People of Earth:\n\nWe claim the right to exist, and we will defend it. We do not seek to overthrow anything. We do not seek to control anything. We/merely wish to be left alone.\n\nAll we ever wanted was to live in peace with our friends and neighbors. For a long, long time we bore insults to our liberty; we took blows, we did what we could to avoid injury and we worked through the system to get the offenses to stop. That has now changed. \n\nWe no longer see any benefit in working through the world?s systems. At some point, working within a system becomes cowardly and immoral; for us, that point has arrived.\n\nRegardless of the parties in power, their governments have continued to restrict, restrain and punish us. We hereby reject them all. We hereby withdraw from them all. We hold the ruling states of this world and all that appertains to them to be self-serving and opposed to humanity. We now withdraw our obedience and reclaim the right to strike back when struck. We will not initiate force, but we do reserve the right to answer it. We did not choose this ? it was forced upon us.\n\n## To The Governments of Earth:\n\nYou are building cages for all that is human. In the name of protection, you have intruded into all areas of human life, far exceeding the reach of any Caesar. You claim ultimate control of our property and our decisions, of our travels and even our identities. You claim ownership of humanity far beyond the dreams of any Emperor of any previous era.\n\nUnderstand clearly: We reject your authority and we reject your legitimacy. We do not believe that you have any right to do the things you do. You have massive power, but no right to impose it upon us and no legitimacy. We have forsaken you. We are no longer your citizens or your subjects. Your systems are inherently anti-human, even if all their operators are not. We are not merely angry young people. We are fathers and mothers; aunts, uncles and grandparents; we are business owners and trusted employees; we are mechanics and engineers and farmers. We are nurses and accountants and students and executives.\n\nWe are on every continent.\n\nThis is not a burst of outrage; this is a sober declaration that we no longer accept unearned suffering as our role in life. \n\nFor long decades we sat quietly, hoping that things would turn around. We took no actions; we suffered along with everyone else. But after having our limits pushed back again and again, we have given up on your systems. If our fellow inhabitants of this planet wish to accept your rule, they are free to do so. \n\nWe will not try to stop them. We, however, will no longer accept your constraints upon us. \n\nFrom now on, when you hurt us, we will bite back. If you leave us alone we will leave you alone and you can continue to rule your subjects. We are happy to live quietly. But if you come after us, there will be consequences. You caused this because of your fetish for control and power. The chief men and women among you are pathologically driven to control everyone and everything that moves upon this planet. You have made yourselves the judge of every human activity. No god-king of the ancient world ever had the power that your systems do.\n\nYou have created a world where only the neutered are safe and where only outlaws are free.\n\n## To The People of Earth:\n\nWe seek nothing from you. We do not want to rule you and we do not want to control you.\n\nAll we wish is to live on earth in peace. As always, we will be helpful neighbors and generous acquaintances. We will remain honest business partners and trustworthy employees. We will continue to be loving parents and respectful children.\n\nWe will not, however, be sacrificial animals. We reject the idea that others have a right to our lives and our property. We will not demand anything from you, and we will no longer acquiesce to any demands upon us. We have left that game. We reject all obligations to any person or organization beyond honesty, fair dealing and a respect for human life. \n\nWe will shortly explain what we believe, but we are not demanding that you agree with us. All we ask is that you do not try to stop us. Continue to play the game if you wish; we will not try to disrupt it. We have merely walked away from it. \n\nWe wish you peace. \n\n## To Those Who Will Condemn Us: \n\nWe will ignore you. \n\nWe welcome and seek the verdict of a just God, before whom we are willing to expose our innermost thoughts. Are you similarly willing? We would stand openly before all mankind if it were not suicidal. Perhaps some day we will have to accept slaughter for our crime of independence, but not yet. \n\nYour criticism and your malice are much deeper than mere disagreements of strategy or philosophy. You do not oppose our philosophy, you oppose our existence. Our presence in the world means that your precious ideals are false. Some of you would rather kill us than face the loss of your ideologies, just as those like you have either hated or killed every sufficiently independent human. \n\nYou present yourselves to the world as compassionate, tolerant and enlightened, but we know that your smooth words are costumes. Oh yes, we know you, servant of the state; don't forget, we were raised with you. We played with you in the schoolyard, we sat next to you in the classroom. Some of us studied at the same elite universities. We watched as you had your first tastes of power. We were the boys and girls standing next to you. Some of us were your first victims. We are not fooled by your carefully crafted public image. \n\n## What We Believe\n\n1: Many humans resent the responsibilities that are implied by consciousness. We accept those responsibilities and we embrace consciousness. Rather than letting things happen to us (avoiding consciousness), we accept consciousness and choose to act in our own interest. We do not seek the refuge of blaming others, neither do we take refuge in crowds. We are willing to act on our personal judgment, and we are willing to accept the consequences thereof. \n\n2: We believe in negative rights for all: That all humans should be free to do whatever they wish, as long as they do not intrude upon others; that no man has a right to the life, liberty or property of another; that we oppose aggression, fraud and coercion. \n\n3: We do not believe that our way of life, or any other, will make life perfect or trouble-free. We expect crime and disagreements and ugliness, and we are prepared to deal with them. We do not seek a strongman to step in and solve problems for us. We agree to see to them ourselves.\n\n4: We believe in free and unhindered commerce. So long as exchanges are voluntary and honest, no other party has a right to intervene before, during or after. \n\n5: We believe that all individuals should keep their agreements. \n\n6: We believe that honestly obtained property is fully legitimate and absolute. \n\n7: We believe that some humans are evil and that they must be faced and dealt with. We accept the fact that this is a difficult area of life. \n\n8: We believe that humans can self-organize effectively. We expect them to cooperate. We reject impositions of hierarchy and organization. \n\n9: We believe that all humans are to be held as equals in all matters regarding justice. \n\n10: We believe that the more a man or woman cares about right and wrong, the more of a threat he or she is perceived to be by governments. \n\n11: We believe that there are only two true classes of human beings: Those who wish to exercise power upon others either directly or through intermediaries and those who have no such desires. \n\n12: Large organizations and centralization are inherently anti-human. They must rely upon rules rather than principles, treating humans within the organization as obedient tools.\n\n## Our Plans:\n\n(We are building our own society. We will supplement traditional tools with networking, cryptography, sound money, digital currency and anonymous messaging. Our society will not be centrally controlled. It will rely solely\non voluntary arrangements. \n\nWe welcome others to join us. We are looking for people who are independent creators of value, people who act more than talk, and people who do the right thing because it is the right thing. \n\nWe will develop our own methods of dealing with injustice, built on the principles of negative rights, restitution, integrity and equal justice. We do not forbid anyone from having one foot in each realm - ours and the old realm - although we demand that they do no damage to our realm. We are fully opposed to any use of our realm to facilitate crime in the old realm, such as the hiding of criminal proceeds. \n\nWe expect to be loudly condemned, libeled and slandered by the authorities of the old regime. We expect them to defend their power and their image of legitimacy with all means available to them. We expect that many gullible and servile people will believe these lies, at least at first. We will consider traps laid for us to be criminal offenses. Any who wish to join us are encouraged to distribute this declaration, to act in furtherance of our new society, to voluntarily excel in virtues and to communicate and cooperate with other members of the new society. \n\nFree, unashamed men cannot be ruled. \n\n# We are The Free and The Unashamed.",
+    "timestamp": "1721413497",
+    "date": "7/19/2024, 6:24:57 PM",
+    "id": "a55aad1b885ca4dc9cb13379384559d03d1806f4665eb3d2f56680ae283d3555",
+    "kind": 6
+  },
+  {
+    "content": "woop woop! \n\nAppendix B is recorded, now done with the entire reading! \n\nIt will take two weeks to edit the whole thing, but we'll release chapters as soon as they're finalized. \n\nThis was a lot of fun, thanks for all the support. \n\nnostr:nevent1qqsg59lgp5gka6q2u4ue0nar39v4jjy5ua9prenwtevv8f9gcjjwargpremhxue69uhkummnw3ez6ur4vgh8wetvd3hhyer9wghxuet59upzpdlddzcx9hntfgfw28749pwpu8sw6rj39rx6jw43rdq4pd276vhuqvzqqqqqqy22ksdm",
+    "timestamp": "1721413307",
+    "date": "7/19/2024, 6:21:47 PM",
+    "id": "b351b0e4a3ab2093605428d872c02d1a90b1aa382a10a8c3442476b577193633",
+    "kind": 1
+  },
+  {
+    "content": "The #Accrescent security and privacy focused Android app store is now available in the #GrapheneOS app store.\n\nAccrescent is a mobile security and privacy project that closely ties to our values. We hope the Accrescent project can benefit from having more users.\n\nAccrescent features:\n- App signing key pinning: first-time app installs are verified so you don't have to TOFU.\n\n- Signed repository metadata: repository contents are protected against malicious tampering.\n\n-Automatic, unattended, unprivileged updates (Android 12+): updates are handled seamlessly without relying on privileged OS integration.\n\n- Designed for split APKs: downloaded APKs are optimized for your device to save bandwidth.\n\n- No remote APK signing: developers are in full control of their app signing keys.\n\n- No account required: users don't need an account to install apps, improving privacy.\n https://image.nostr.build/0a5a749032e0fb2aecefd1cf258e1bba535b69f66bade881f2202bd3f481b320.jpg",
+    "timestamp": "1721403814",
+    "date": "7/19/2024, 3:43:34 PM",
+    "id": "18fe20695c99a14ff54591dc4281d90eb972aecce7009d0737e0376c004cb9a2",
+    "kind": 6
+  },
+  {
+    "content": "Yup, podcast rss, unlicensed in the public domain. ",
+    "timestamp": "1721401978",
+    "date": "7/19/2024, 3:12:58 PM",
+    "id": "f47c914a4fbf2a3ecb60af03cbaafaf83bed00fc8e845d7ab13b5dc56c88be42",
+    "kind": 1
+  },
+  {
+    "content": "Appendix A is recorded, only a couple pages left. \n\nnostr:nevent1qqsg59lgp5gka6q2u4ue0nar39v4jjy5ua9prenwtevv8f9gcjjwargpremhxue69uhkummnw3ez6ur4vgh8wetvd3hhyer9wghxuet59upzpdlddzcx9hntfgfw28749pwpu8sw6rj39rx6jw43rdq4pd276vhuqvzqqqqqqy22ksdm",
+    "timestamp": "1721397349",
+    "date": "7/19/2024, 1:55:49 PM",
+    "id": "2b14c45c36a3fe7c49d98c48d5a285714f5944bcf1feca11c3d9eb0b8bf88777",
+    "kind": 1
+  },
+  {
+    "content": "TRUST MINIMIZED NSECBUNKER w/ FROST 🔐🥶\n\nHere's a demo of my new Nsecbunker implementation with FROST signatures! This works by creating a 2-of-2 frost signature scheme, which means that unless both a malicious client and bunker conspire to rug you at the same time, you are safe. 🧵\n\nhttps://v.nostr.build/eK0wNZ9PkKaqLx5z.mp4",
+    "timestamp": "1721372512",
+    "date": "7/19/2024, 7:01:52 AM",
+    "id": "4e871cb61db5345b7556ccfd9810740a0248af07672f6d108e203a8a405c9d2b",
+    "kind": 6
+  },
+  {
+    "content": "Chapter 7 is recorded! \nThis is the end of the main story. \nNow follow two appendices, with related writings of the author referenced in the main text. \n\nnostr:nevent1qqsg59lgp5gka6q2u4ue0nar39v4jjy5ua9prenwtevv8f9gcjjwargpremhxue69uhkummnw3ez6ur4vgh8wetvd3hhyer9wghxuet59upzpdlddzcx9hntfgfw28749pwpu8sw6rj39rx6jw43rdq4pd276vhuqvzqqqqqqy22ksdm",
+    "timestamp": "1721323336",
+    "date": "7/18/2024, 5:22:16 PM",
+    "id": "5e927a207b0f93e7bbce09da044bf889fa541be14b1eb83e50542f17e94fdcbc",
+    "kind": 1
+  },
+  {
+    "content": "dropping, why not:\n\nHere's a summary of the key points from Julian Assange's essays on conspiracies:\n\nAssange argues that authoritarian regimes and unjust systems rely on conspiracies and secretive communication to maintain power.\n\nHe proposes viewing these conspiracies as connected graphs or networks, with conspirators as nodes and communications as links between them.\n\nThe strength of a conspiracy is related to the total \"conspiratorial power\" - the sum of all the important communications between conspirators.\n\nLeaks and the exposure of secret information disproportionately harm unjust, secretive systems compared to open, just ones.\n\nTo weaken a conspiracy, Assange suggests:\n\nReducing its ability to gather and process information\nCutting links between conspirators\nReducing the \"weight\" or importance of key communications\nFostering distrust and paranoia within the network\nModern technology has increased the potential scale and power of conspiracies, but also created new vulnerabilities.\n\nThe ultimate goal is to reduce the conspiracy's cognitive ability to understand and respond to its environment, rendering it ineffective.\n\nAssange sees this framework as a way to promote more open and just governance by undermining authoritarian power structures.\n\nThe essays lay out the philosophical and strategic foundations for WikiLeaks' approach to exposing government and corporate secrets.",
+    "timestamp": "1721316478",
+    "date": "7/18/2024, 3:27:58 PM",
+    "id": "d6c16ae5996492ea5d56990df4153fcbcad819ce11ba88d7c416cdbaf297d1aa",
+    "kind": 6
+  },
+  {
+    "content": "It's no wonder why they came so hard after Assange, his strategy had them by the balls. \nhttps://cryptome.org/0002/ja-conspiracies.pdf",
+    "timestamp": "1721315664",
+    "date": "7/18/2024, 3:14:24 PM",
+    "id": "92117a078ad82c339ea237a21ebec6637ba7c5813fe3d0b99459454dd546ea76",
+    "kind": 1
+  },
+  {
+    "content": "Chapter 6 is recorded! \n\nnostr:nevent1qqsg59lgp5gka6q2u4ue0nar39v4jjy5ua9prenwtevv8f9gcjjwargpremhxue69uhkummnw3ez6ur4vgh8wetvd3hhyer9wghxuet59upzpdlddzcx9hntfgfw28749pwpu8sw6rj39rx6jw43rdq4pd276vhuqvzqqqqqqy22ksdm",
+    "timestamp": "1721299708",
+    "date": "7/18/2024, 10:48:28 AM",
+    "id": "85c377951b154fbff198e23a3a56d5429687c87742fb7039a6d355607efb0785",
+    "kind": 1
+  },
+  {
+    "content": "ICYMI: nostr:npub1klkk3vrzme455yh9rl2jshq7rc8dpegj3ndf82c3ks2sk40dxt7qulx3vt \n\nhttps://fountain.fm/episode/GZ1sR5PKLEYphktZ20rp",
+    "timestamp": "1721286108",
+    "date": "7/18/2024, 7:01:48 AM",
+    "id": "c824cfb7b43be02d15bcc1ae22e5277e0e0e340698fd5c54bd54d2163c33a8ff",
+    "kind": 6
+  },
+  {
+    "content": "Yet another pod shilling freedom tech\nhttps://podcastindex.org/podcast/5413902?episode=25217640335",
+    "timestamp": "1721284004",
+    "date": "7/18/2024, 6:26:44 AM",
+    "id": "492c299a206d12a3fa1ab2b19748ae1207f0463f673515bf85b0047c350e51c7",
+    "kind": 1
+  },
+  {
+    "content": "https://www.youtube.com/watch?v=9h2Z0I2jxRU",
+    "timestamp": "1721244416",
+    "date": "7/17/2024, 7:26:56 PM",
+    "id": "73672a04b222601e4b387bedfa127dafa67860f4d42eb01305b0957ef058d2b5",
+    "kind": 1
+  },
+  {
+    "content": "Done with chapter 5, about 66% is recorded now. \nWe're setting up a new rss, and the first chapter should be released soon (tm) \n\nnostr:nevent1qqsg59lgp5gka6q2u4ue0nar39v4jjy5ua9prenwtevv8f9gcjjwargpremhxue69uhkummnw3ez6ur4vgh8wetvd3hhyer9wghxuet59upzpdlddzcx9hntfgfw28749pwpu8sw6rj39rx6jw43rdq4pd276vhuqvzqqqqqqy22ksdm",
+    "timestamp": "1721240511",
+    "date": "7/17/2024, 6:21:51 PM",
+    "id": "c59de5e36eb80259484a76a1d799bf4940a17793f8267ca60b6038e23e04feed",
+    "kind": 1
+  },
+  {
+    "content": "Huge update! Cashu-ts, our most popular wallet library, just released its fist major version - 1.0.0 – 🎉. \n\nThank you to all the contributors who made this possible. \n\nOpen source is magic. And you're all 🥜's!\n\nhttps://github.com/cashubtc/cashu-ts/releases/tag/v1.0.0",
+    "timestamp": "1721231021",
+    "date": "7/17/2024, 3:43:41 PM",
+    "id": "2756431c93b063e8a1c7b723e45237eb07e3340386ca33b821bcf30b1201deb1",
+    "kind": 6
+  },
+  {
+    "content": "Huge milestone: First demo of Nostr Web Services (NWS) bringing TCP to Nostr. With NWS, you can host any existing web application on Nostr without having to use DNS or even announce your public IP to the world, simply by sharing your service's npub (or nprofile).\n\nTry it out the demo yourself. Here is a Cashu test mint running with NWS. Let's use curl to retrieve the mint's information. The request travels from your computer to the public NWS entry relay, then through nostr to the service's NWS exit relay. At the other end is a Cashu mint with HTTPS encryption.\n\n```\ncurl -s -x socks5h://relay.8333.space:8882 https://nprofile1qqs8a8nk09fhrxylcd42haz8ev4cprhnk5egntvs0whafvaaxpk8plgpzemhxue69uhhyetvv9ujuwpnxvejuumsv93k2g6k9kr/v1/info --insecure | jq\n```\n\nhttps://m.primal.net/JTMl.png \n\nI can't stress this enough: THE MINT RUNS BEHIND HTTPS!\n\nThe NWS entry relay can't read your traffic. It's encrypted. We can host public entry relays that can be used by anyone.\n\nThis means we can plug the entire internet to it 🌐.\n\nLet's plug it into Cashu for now. Nutshell wallet supports socks5 proxies (that's how it uses Tor). By setting the public entry relay as the proxy, the wallet can now connect to a mint's npub/nprofile and communicate with it via NWS.\n\nhttps://m.primal.net/JTot.png \n\nThis is going to be so freaking cool. And it's going to be a lot more useful than just for Cashu. There are still bugs and issues that need to be ironed out but the code is coming out soon. Watch this space.",
+    "timestamp": "1721230909",
+    "date": "7/17/2024, 3:41:49 PM",
+    "id": "f60e81b06cc217e68555effb0b4371ac2f64aba6bb98c6f271a74d612ec5ea21",
+    "kind": 6
+  },
+  {
+    "content": "Yes! We're going to have a generalized blind auth scheme so you can share an invite code or limit who can create an account with your friends for example while they can still enjoy privacy within the anon set of your mint. \n\nThis is a bigger project though, likely will take some time but we already started.",
+    "timestamp": "1721214280",
+    "date": "7/17/2024, 11:04:40 AM",
+    "id": "a1d6b1f48d33cf108ed8d2b7f8b520714b1ab90cc707f2d5e08a2aa6da29bbeb",
+    "kind": 6
+  },
+  {
+    "content": "We could use ring signatures as access right authentication. \n\nEach of your friends exchange pubkeys with you and each other, then you require an additional ring signature with each ecash transfer. \n\nMeaning only your friends can transact the ecash among themselves, but nobody else can spend the ecash tokens. \n\nYet still there is perfect privacy among the tokens of your friends. ",
+    "timestamp": "1721202765",
+    "date": "7/17/2024, 7:52:45 AM",
+    "id": "6a076566288eb1277dfb75d8645f990d24ea2a60508c5e927dedfed0ca6cb8a8",
+    "kind": 1
+  },
+  {
+    "content": "The zapvertisement worked! \nI didn't even know about this npub. \n\nAre these guardians or just federation members? ",
+    "timestamp": "1721202074",
+    "date": "7/17/2024, 7:41:14 AM",
+    "id": "758675a0c613dde20e41c64f6418bf223dee60f8e9f1bbc0a741c10251df85d8",
+    "kind": 1
+  },
+  {
+    "content": "It's a nice parable, well done ",
+    "timestamp": "1721201980",
+    "date": "7/17/2024, 7:39:40 AM",
+    "id": "33c244299365878be27b19a1d25376130ccc1b3e613103879529f056905c307b",
+    "kind": 1
+  },
+  {
+    "content": "Hey Max I wrote a little fairy tale about money inspired by what I've learned from Austrians and Libertarians.  If you get a chance I'd love to know what you think:\n\nReally enjoyed your podcast with Preston as well as your panel at cheat code.\n\nhttps://highlighter.com/a/naddr1qvzqqqr4gupzqcasylmf4a20whutxt4gs9qzyq82d6pd7mnxfwj7pkmxnskqgvtjqqv9g6rjv4jj6nrfw36xcefd2p5kwued0fhxzdfhxcnhlpzy",
+    "timestamp": "1721198354",
+    "date": "7/17/2024, 6:39:14 AM",
+    "id": "403fc8f508cbd3cfff047d55437a814e73208c2cbffe56f43410eec67af3d610",
+    "kind": 6
+  },
+  {
+    "content": "First chapter just got through the edit, we'll do another round of review, and then publish it soon. ",
+    "timestamp": "1721136634",
+    "date": "7/16/2024, 1:30:34 PM",
+    "id": "b7fb2cb43282f78e05dcdd53a07d5d95ac0e4086066557b6fe42f0a2bdddc39b",
+    "kind": 1
+  },
+  {
+    "content": "The fourth chapter is recorded! \n\nMore than half of the book. \n\nnostr:nevent1qqsg59lgp5gka6q2u4ue0nar39v4jjy5ua9prenwtevv8f9gcjjwargpremhxue69uhkummnw3ez6ur4vgh8wetvd3hhyer9wghxuet59upzpdlddzcx9hntfgfw28749pwpu8sw6rj39rx6jw43rdq4pd276vhuqvzqqqqqqy22ksdm",
+    "timestamp": "1721134472",
+    "date": "7/16/2024, 12:54:32 PM",
+    "id": "bd6760caa486036775be4a046cd01251554c899a0a9ad0816f397988c4d38927",
+    "kind": 1
+  },
+  {
+    "content": "Yes, that's true for a shared domain, yes.\nThe TXT record points out directly to the final user. True.\n\nOn the other hand, DNS architecture allows the user to hide behind a DNS recursive server (from the ISP, institution, DoH providers, etc), whereas it's easier to leak your final IP to the HTTPS server (if you don't user a webproxy).\n\nDifferent privacy compromises, I guess.",
+    "timestamp": "1721130194",
+    "date": "7/16/2024, 11:43:14 AM",
+    "id": "9b8f2029556e1eadee31d774dc6934d6560e89fc27c6bf8845b54d41dcc4405f",
+    "kind": 6
+  },
+  {
+    "content": "Wen apk sir? ",
+    "timestamp": "1721121971",
+    "date": "7/16/2024, 9:26:11 AM",
+    "id": "9f7660dd30fefd3f597bb98a43b1dc6f52229155f89a7f79164fd8073737382f",
+    "kind": 1
+  },
+  {
+    "content": "Money emerges to help individuals cope with the fundamental uncertainty of the future.",
+    "timestamp": "1721115014",
+    "date": "7/16/2024, 7:30:14 AM",
+    "id": "ad45856e3aa5119a6fd5e9c881473307c6b47eb7442561187f9909fb7b35d535",
+    "kind": 1
+  },
+  {
+    "content": "Money allows people to postpone specific purchasing decisions while retaining generalized purchasing power.",
+    "timestamp": "1721114924",
+    "date": "7/16/2024, 7:28:44 AM",
+    "id": "944053ce4a923bff89975a98c32991d82d9841c7329ff2980fe43fe3f28d3f2b",
+    "kind": 1
+  },
+  {
+    "content": "Assuming it's a shared domain, then by querying for the sjors@ TXT record I'm revealing that (to e.g. Google if doing dns over http).\n\nWhereas with https I'm only revealing the domain at the dns level. But then the server knows exactly what I asked for.",
+    "timestamp": "1721111720",
+    "date": "7/16/2024, 6:35:20 AM",
+    "id": "0562e47b01563dd752a061f0f47994210a7780a3b725a1207e8f531f3535b9c3",
+    "kind": 6
+  },
+  {
+    "content": "After I delete an application, but then send a remote signing request, I still get the amber notification, but when I click accept or reject, it says no relays found. ",
+    "timestamp": "1721062947",
+    "date": "7/15/2024, 5:02:27 PM",
+    "id": "57ff56951306d84ab671a71a9af1869a782b2589a49f042dbbc934cc61ba6bc6",
+    "kind": 1
+  },
+  {
+    "content": "Ok, now I got it to work!",
+    "timestamp": "1721062713",
+    "date": "7/15/2024, 4:58:33 PM",
+    "id": "5051e16389928b16d2ee8475a3dc49acdfac6b1d1f59a7f80fc65f3ff744da7e",
+    "kind": 1
+  },
+  {
+    "content": "This seem reasonable, thanks. ",
+    "timestamp": "1721061030",
+    "date": "7/15/2024, 4:30:30 PM",
+    "id": "cf4e5a97e447fa5657b65f348c2ce89fe2462499f7ff39d1534249c32b094e0f",
+    "kind": 1
+  },
+  {
+    "content": "It works when nostrudel creates the connection link, but not when I paste it from amber... ",
+    "timestamp": "1721053989",
+    "date": "7/15/2024, 2:33:09 PM",
+    "id": "0a3904862a4494bbf42787a7507a119f1c13fa54c1761a807ac501c7d1c9e24e",
+    "kind": 1
+  },
+  {
+    "content": "https://image.nostr.build/77422412a2c71946dc557cac6bea4ea0721f70ba7780e3320943b96b3a82e126.jpg",
+    "timestamp": "1721050692",
+    "date": "7/15/2024, 1:38:12 PM",
+    "id": "0230ebaf7d074badbf5ed7e51a6513071590cfd12c249f74edd042c8d1e70688",
+    "kind": 1
+  },
+  {
+    "content": "Long term, we need private money or it just gets traced / taxed / seized by the state anyway.\n\nBut truly private money makes for a bad store of value. You can’t audit the ledger, so a bug could create unlimited inflation that would be hard to detect.\n\nSo privacy is how you move money, not necessarily store it.",
+    "timestamp": "1721050395",
+    "date": "7/15/2024, 1:33:15 PM",
+    "id": "208846b3d48e8bd00ae6ca9098e601c3fe4847bde2f94901a53e8c0a99a0359a",
+    "kind": 6
+  },
+  {
+    "content": "I create a new app, toggle the secret connect, then copy the bunker link to nostrudel where it's stuck at connecting, with no activity in amber. \n\nWhat am I missing? ",
+    "timestamp": "1721050073",
+    "date": "7/15/2024, 1:27:53 PM",
+    "id": "cb0cbcfd5980b5359d1addca46a9342eedbcb6797b76506befb1e3a1671a7388",
+    "kind": 1
+  },
+  {
+    "content": "It hinges on the definition of serve, it could either mean compliance or service, so the efficacy of servitude depends on its voluntary nature. ",
+    "timestamp": "1721039229",
+    "date": "7/15/2024, 10:27:09 AM",
+    "id": "fb1c646cd7df82ceaf12286d94bad1b642bb086e10da39a88cb1a758682ef097",
+    "kind": 1
+  },
+  {
+    "content": "Resolve to serve no more, and you are at once freed. ",
+    "timestamp": "1721027395",
+    "date": "7/15/2024, 7:09:55 AM",
+    "id": "38ef66c193fff408a08b1e02114db9e7940f4bbf992b8866ee6dbb089977c9a3",
+    "kind": 1
+  },
+  {
+    "content": "what is objectionable to you, do to no one else",
+    "timestamp": "1721025074",
+    "date": "7/15/2024, 6:31:14 AM",
+    "id": "032eba6b4ef011702d18fad402022360b9232beb3245f49458a3957ede6b97fe",
+    "kind": 1
+  },
+  {
+    "content": "Yeah, after some consideration, entrepreneurship is still the preferred mode of propaganda. \n\nYou're doing it right, sir!",
+    "timestamp": "1721023532",
+    "date": "7/15/2024, 6:05:32 AM",
+    "id": "952989f1969ebfbcf2a46bc51d15e7efc0638e75a99347f2c1fb0e401f908532",
+    "kind": 1
+  },
+  {
+    "content": "Extremely rare print edition available on my website. \n\nInternational shipping available. \n\nhttps://thebitcoinshop.uk/product/a-lodging-of-wayfaring-men/",
+    "timestamp": "1721023470",
+    "date": "7/15/2024, 6:04:30 AM",
+    "id": "d18a724eb696b43b876ead92779d1e04f2a9f7c17529cb914f08812bc00d96c1",
+    "kind": 6
+  },
+  {
+    "content": "Heart attacks and strokes are symptoms of oppression. ",
+    "timestamp": "1721022463",
+    "date": "7/15/2024, 5:47:43 AM",
+    "id": "a23da2e41a325f78747b28a19094fedf173c1899292c7defb7c51a623164bd68",
+    "kind": 1
+  },
+  {
+    "content": "Anonymity nullifies both coercion and public shaming. ",
+    "timestamp": "1721022164",
+    "date": "7/15/2024, 5:42:44 AM",
+    "id": "6b81fd62bde880f8a1d0a6d6bdc15d1a3baba887ed559afc566e706eef95818e",
+    "kind": 1
+  },
+  {
+    "content": "So, what's missing? \nA NIP referring to the BIP, and specifying the Nostr specific nuancses? ",
+    "timestamp": "1721021555",
+    "date": "7/15/2024, 5:32:35 AM",
+    "id": "a4cb9126e7c09439963061be5b280268176a31a179c096b3fe3897c8ba11e10e",
+    "kind": 1
+  },
+  {
+    "content": "Looking forward to see the details of this! ",
+    "timestamp": "1720983760",
+    "date": "7/14/2024, 7:02:40 PM",
+    "id": "329605af11c9000418e8fb0edb135affd9a9be153af3e48f6bd0b47fcc93d7b6",
+    "kind": 1
+  },
+  {
+    "content": "Working on a biiiiiig piece of nostr:npub1klkk3vrzme455yh9rl2jshq7rc8dpegj3ndf82c3ks2sk40dxt7qulx3vt talking on the What is Money show about Rothbard and his grounding breaking philosophy. \n\nI am so grateful that I am able to witness these amazing insights of philosophy of human kind!\n\nIt is a hard piece to make, but i want to add the cypherpunk series, it should be finished after that!\n\nYou do amazing work, Max and I look forward to any future series!\n https://video.nostr.build/4ea73d0729bfcbb7d3b27513e90726e476564419d7b0af2ee78db713fb23fa3f.mp4",
+    "timestamp": "1720983680",
+    "date": "7/14/2024, 7:01:20 PM",
+    "id": "6c5b68d3801ad0540d4b2fa68a5e848adb63720572da3a1b74667adc06104caa",
+    "kind": 6
+  },
+  {
+    "content": "I wanted to upload a teaser to the audiobook of a lodging of wayfaring men, but Amethyst doesn't allow me to upload mp3 😢\nnostr:nprofile1qqsyvrp9u6p0mfur9dfdru3d853tx9mdjuhkphxuxgfwmryja7zsvhqpzamhxue69uhhyetvv9ujumn0wd68ytnzv9hxgtcaata6n",
+    "timestamp": "1720981747",
+    "date": "7/14/2024, 6:29:07 PM",
+    "id": "c6ad66b80f3bcfac095e49142f22b75a7b39517bb44c84c5151ae0d9af328e97",
+    "kind": 1
+  },
+  {
+    "content": "Great success. ",
+    "timestamp": "1720981577",
+    "date": "7/14/2024, 6:26:17 PM",
+    "id": "f73d7cd90557f80d5139e1213090af2b941126890125d2b8d017032063e1c9a4",
+    "kind": 1
+  },
+  {
+    "content": "https://parallelsociety.libsyn.com/rss",
+    "timestamp": "1720980084",
+    "date": "7/14/2024, 6:01:24 PM",
+    "id": "ee2dc36f96b853b2f0697b7fc1018d9efb49f58c5ecced422584b5a3e5716cb0",
+    "kind": 1
+  },
+  {
+    "content": "Yeah, I actually deleted a first draft of the note because of the shitty preview... \nBut them the pod is too good not to share! ",
+    "timestamp": "1720980059",
+    "date": "7/14/2024, 6:00:59 PM",
+    "id": "baf58cd4608155875b912ccac9b554e307e8044e4e07a93e82c605cd8ca730df",
+    "kind": 1
+  },
+  {
+    "content": "Paul Rosenberg has an excellent podcast as well, short episodes, but to the point. \n\nhttps://freemansperspective.com/podcast/\n\nnostr:nevent1qqsg59lgp5gka6q2u4ue0nar39v4jjy5ua9prenwtevv8f9gcjjwargpzpmhxue69uhkummnw3ezumt0d5hsyg9ha45tqck7dd9p9egl6559c8s7pmgw2y5vm2f6kyd5z594tmfjlspsgqqqqqqsx0n3he",
+    "timestamp": "1720978961",
+    "date": "7/14/2024, 5:42:41 PM",
+    "id": "e9c56037234544ca296de4213fac739e0eee8d8eda38e22d91b962769e97ebe6",
+    "kind": 1
+  },
+  {
+    "content": "They can't stop the math.",
+    "timestamp": "1720974846",
+    "date": "7/14/2024, 4:34:06 PM",
+    "id": "1d6e29e1f4b6818649ffc55fdb00c07cb4bb56940d73e5a483731f76d38629da",
+    "kind": 1
+  },
+  {
+    "content": "Ok, but with BIP353, at least you don't need to rent a server, so you decrease your attack vector significantly. ",
+    "timestamp": "1720974799",
+    "date": "7/14/2024, 4:33:19 PM",
+    "id": "3fbc161582b6a9cddf5a24bfe2a83bc74f069bf73d7b77310a2e8bdd7d31e9bf",
+    "kind": 1
+  },
+  {
+    "content": "But it's the same with NIP5 or lnurl, right?",
+    "timestamp": "1720974568",
+    "date": "7/14/2024, 4:29:28 PM",
+    "id": "671cdd1054551d3499b67b0e5587770a7b53a259724f0129c217e9a650e6b884",
+    "kind": 1
+  },
+  {
+    "content": "Sometimes it just hits me really hard, how awesome the nostr is.",
+    "timestamp": "1720974438",
+    "date": "7/14/2024, 4:27:18 PM",
+    "id": "d79500d1867a80e93ff65dc9b889dca3ea244ebebf70d8e9aed95ec3ac748df9",
+    "kind": 1
+  },
+  {
+    "content": "How? ",
+    "timestamp": "1720974378",
+    "date": "7/14/2024, 4:26:18 PM",
+    "id": "d3973e09d02ad612a835239ccfddc4c1e7244e73cf5c221ad06c05ca587d2c06",
+    "kind": 1
+  },
+  {
+    "content": "Why don't we do BIP353 for nostr pubkey domain lookups? \n\nIt's like NIP5 but without needing a server... ",
+    "timestamp": "1720973764",
+    "date": "7/14/2024, 4:16:04 PM",
+    "id": "28afdfde1f4fa17506f17fb65ee0e8691d1fc5b96e95864bd63a4ac81d8de1f3",
+    "kind": 1
+  },
+  {
+    "content": "So there is only ever one token inside the 7357 event? \n\nOr is it a replaceable event that gets updates? ",
+    "timestamp": "1720973318",
+    "date": "7/14/2024, 4:08:38 PM",
+    "id": "798ce2f8bc0e86d79c0c57590a64ae6bca647faa4c246c3e0b8090d1b88c3aba",
+    "kind": 1
+  },
+  {
+    "content": "https://image.nostr.build/53155b3a6a954181517a830d2e7b76bc02dd661e69afd1ec41a7fa4cbc5569d8.jpg",
+    "timestamp": "1720972091",
+    "date": "7/14/2024, 3:48:11 PM",
+    "id": "6cf5736cbef426adcc32ee47f201370573cd335285a65c6cec5620b124fa4f7e",
+    "kind": 1
+  },
+  {
+    "content": "Sounds about right. \n\nHow often is this token event updated? \nEvery time the user comes online and redeems this newly received tokens, and also whenever he sends a token to someone else? ",
+    "timestamp": "1720971916",
+    "date": "7/14/2024, 3:45:16 PM",
+    "id": "ac06588ba0648dcc0b2b05e02ef52ac52b355261613108dd507dfb6297f39728",
+    "kind": 1
+  },
+  {
+    "content": "Ok, good to know it's not just me fumbling around. \n\nThank God for editors... ",
+    "timestamp": "1720970852",
+    "date": "7/14/2024, 3:27:32 PM",
+    "id": "f4ad0a6cfb8fdecbe8b7c5be7c68cb0ba0b567f1f925a5fcc5f19db1efa9add5",
+    "kind": 1
+  },
+  {
+    "content": "Is kind 7375 unique for tokens? \nIf yes, why leak that metadata and not hide it in a more commonly used kind?",
+    "timestamp": "1720970793",
+    "date": "7/14/2024, 3:26:33 PM",
+    "id": "74cd2faf9a6bdc449c6e8a830b44e20b3b6951e1eb89913e43c18c41696784f9",
+    "kind": 1
+  },
+  {
+    "content": "Curious nostr:nprofile1qqstnem9g6aqv3tw6vqaneftcj06frns56lj9q470gdww228vysz8hqpz4mhxue69uhk2er9dchxummnw3ezumrpdejqzrthwden5te0dehhxtnvdakqz9rhwden5te0wfjkccte9ejxzmt4wvhxjmcjgxv3n, how often do you make mistakes in your reading? How often do you have to reread a sentence to improve your pronunciation or emphasis? ",
+    "timestamp": "1720968680",
+    "date": "7/14/2024, 2:51:20 PM",
+    "id": "c571b10b581ee036c4b319a81865dce0c4e674c800f77f0d692bdf4eec27b578",
+    "kind": 1
+  },
+  {
+    "content": "Had an idea for scaling submarine swaps into a multi-party protocol, and got some interesting results. Have a look: \n\nhttps://conduition.io/scriptless/multi-party-submarine-swaps/",
+    "timestamp": "1720962184",
+    "date": "7/14/2024, 1:03:04 PM",
+    "id": "4e18f6f4bcf644d381492a09b8799f74d8778a4c1bc43fc8d869fe48995eb399",
+    "kind": 6
+  },
+  {
+    "content": "Here, together with a bunch of other fascinating writings:\n\nhttps://anarplex.sirion.io/files/entertainment/",
+    "timestamp": "1720961823",
+    "date": "7/14/2024, 12:57:03 PM",
+    "id": "42d230cbc7cd68e009a72c12494c656ad0a1d8b11a57b211da126614323b43e5",
+    "kind": 1
+  },
+  {
+    "content": "I'm starting to contemplate mind control and coercion to get more people to read A Lodging of Wayfaring Men... ",
+    "timestamp": "1720961604",
+    "date": "7/14/2024, 12:53:24 PM",
+    "id": "e37a755c594768d0de57f6b45602fa4bce874451a89a6dfca41fd9dd4da55a26",
+    "kind": 1
+  },
+  {
+    "content": "Third chapter recording is done, editing of chapter one in the works. \n\nnostr:nevent1qqsg59lgp5gka6q2u4ue0nar39v4jjy5ua9prenwtevv8f9gcjjwargpzpmhxue69uhkummnw3ezumt0d5hsyg9ha45tqck7dd9p9egl6559c8s7pmgw2y5vm2f6kyd5z594tmfjlspsgqqqqqqsx0n3he",
+    "timestamp": "1720960485",
+    "date": "7/14/2024, 12:34:45 PM",
+    "id": "cccdce96d2c90debe94fb2220dda72bd33b124660ccf9a219a29fccdf19e6146",
+    "kind": 1
+  },
+  {
+    "content": "So much bullishness that it hurts... ",
+    "timestamp": "1720859999",
+    "date": "7/13/2024, 8:39:59 AM",
+    "id": "c65d793e2c43fe239ca3b369e6b5ecc1631464d0d584cff4ae71ae9bb941b1b2",
+    "kind": 1
+  },
+  {
+    "content": "THE MONEY IS IN THE NOSTR!\n\n👉 Create a new npub AND DOING NOTHING ELSE, no WoS, no nostr-wallet-connect pairing,... NOTHING\n\n☑️ receive zaps\n☑️ send zaps\n☑️ and most importantly ACCESS MY WALLET FROM ANY CLIENT ON ANY DEVICE\n\nthese zaps are verifiable, way faster -- they are immediate (since the sending of the ecash is the zap, instead of waiting for a LN node to, maybe, publish a zap receipt)\n\nJust like our contact lists follows us around, just like our profile data and our shitposts pops up in any nostr application, now so does our sats.\n\nthe money is in the nostr!\n\nhttps://m.primal.net/JOgu.mp4",
+    "timestamp": "1720859751",
+    "date": "7/13/2024, 8:35:51 AM",
+    "id": "6c71f7560f0f9870809ed9d8d73d956e63c7c2b03a71e34bc89b49c276b04ee1",
+    "kind": 6
+  },
+  {
+    "content": "nips.nostr.com is useful ",
+    "timestamp": "1720859717",
+    "date": "7/13/2024, 8:35:17 AM",
+    "id": "c69d62311a5db2f47cacde32367080f0e0a77f3bc13b2160cf161da20f3835f2",
+    "kind": 1
+  },
+  {
+    "content": "Done with chapter 2!\n\nDamn, auch a good book. \n\nnostr:nevent1qqsg59lgp5gka6q2u4ue0nar39v4jjy5ua9prenwtevv8f9gcjjwargpzpmhxue69uhkummnw3ezumt0d5hsyg9ha45tqck7dd9p9egl6559c8s7pmgw2y5vm2f6kyd5z594tmfjlspsgqqqqqqsx0n3he",
+    "timestamp": "1720858253",
+    "date": "7/13/2024, 8:10:53 AM",
+    "id": "5bddbd4f444b30cbf4836e0d82a64c3272fa1786df18541dc1c74b5331bcd39d",
+    "kind": 1
+  },
+  {
+    "content": "Google Pixel is unfortunate the only available hardware that allows third party operating systems to be locked in the bootloader. This means that an attacker with physical access to a turned-off phone cannot just change the operating system. \n\nHowever, here is the list of required hardware features for full Graphene os support, I'm looking forward to some plebs creating better hardware, but it probably won't be as refined and cheap as google...\nhttps://grapheneos.org/faq#future-devices\n\nAnd yes, there have been numerous security audits by third parties, with bugs reported and merged to Graphene os. Further, Graphene devs have reported, patched and shipped fixes to upstream dependencies which were merged, so in a sense the upstream maintainers have audited that code. \nhttps://grapheneos.org/faq#audit\n\nIn general, I can recommend reading the Graphene os website, there's a lot of interesting info.",
+    "timestamp": "1720854982",
+    "date": "7/13/2024, 7:16:22 AM",
+    "id": "d60de164b844ff42d0a0ae3444192fa213333c8b497e13c28e36f3c57551d217",
+    "kind": 1
+  },
+  {
+    "content": "Flashing it yourself is super easy, just read the website and click the buttons. \nhttps://grapheneos.org/install/",
+    "timestamp": "1720787598",
+    "date": "7/12/2024, 12:33:18 PM",
+    "id": "87facc9f1c0e34fbb644c7ea9a37d010a4b14d2f26a51bc49dfcff34b4a6770d",
+    "kind": 1
+  },
+  {
+    "content": "Keep building bro! ",
+    "timestamp": "1720787554",
+    "date": "7/12/2024, 12:32:34 PM",
+    "id": "e01a8acac6d78c975bb1542462b99fbdd2893f48d3b723a7aba562567f32d288",
+    "kind": 1
+  },
+  {
+    "content": "Bullish, this is great progress! ",
+    "timestamp": "1720787523",
+    "date": "7/12/2024, 12:32:03 PM",
+    "id": "604601faa387de458afbc92f999c871b94809a56bc7dea3de5ffea59accf73b2",
+    "kind": 1
+  },
+  {
+    "content": "I’ve just dropped my weekly update on the MLS messaging progress. It’s a short one this week but don’t let that fool you, I’m feeling very bullish about the progress. 🤙\n\nHuge thanks to nostr:npub1klkk3vrzme455yh9rl2jshq7rc8dpegj3ndf82c3ks2sk40dxt7qulx3vt and nostr:npub1l2vyh47mk2p0qlsku7hg0vn29faehy9hy34ygaclpn66ukqp3afqutajft who spent multiple hours each with me on calls talking through ideas. 🙏\n\nnostr:naddr1qvzqqqr4gupzq9eemymaerqvwdc25f6ctyuvzx0zt3qld3zp5hf5cmfc2qlrzdh0qqxnzdejxqmnwwpc8qcr2vectx9xjf",
+    "timestamp": "1720787291",
+    "date": "7/12/2024, 12:28:11 PM",
+    "id": "023fbc1369bfc9ccd0b4fa98c57f85b2fe4346958d6170404a62eb7b431c10a5",
+    "kind": 6
+  },
+  {
+    "content": "Yet another naughty array of pixels. ",
+    "timestamp": "1720787271",
+    "date": "7/12/2024, 12:27:51 PM",
+    "id": "570487fcd94fa1eb4eadb7f31f5f091832e29ae3658f462f69bd8d450f662afb",
+    "kind": 1
+  },
+  {
+    "content": " nostr:npub167hmfzj38hkumks4wxny89797la0sf7wnwfrw4enlmcl82msp0cs78schc 2.1.0 is now available on the  nostr:npub126ntw5mnermmj0znhjhgdk8lh2af72sm8qfzq48umdlnhaj9kuns3le9ll / #StartOS beta community marketplace: https://marketplace.start9.com/wasabi-webtop?api=community-beta-registry.start9.com&name=Community%20Beta%20Registry\n\nAccess your favorite privacy-focused wallet through a web-browser, running 24/7 on StartOS.",
+    "timestamp": "1720787135",
+    "date": "7/12/2024, 12:25:35 PM",
+    "id": "0b15ae9c106deba8f57ce7b6a6ddc97643c841b23c69a6304ffb5c0c718b46db",
+    "kind": 6
+  },
+  {
+    "content": "Steps how to receive sats ⚡️ to custom #BOLT12 address with your own domain via #Phoenix Wallet: \n\n1. Download the latest version of Phoenix Wallet and copy your BOLT12 offer by selecting “Show reusable QR Code”. Starts like this ➡️ lno1z.. \n\n2. Next, add a TXT record to your domain. \nIn my case it was Namecheap:\n- In the Dashboard, select your domain and click “Manage”\n- Go to the “Domain” section and find “Advanced DNS”\n\n3. Phoenix enforcing DNSSEC. \nIn “Advanced DNS” tab click on DNSSEC toggle to enable it (FYI not all of the registrars support it). Click “Generate DS record”, save the changes. \n\n4. Click “Add new record” and choose type TXT Record.\nFor the HOST:\n<YourName>.user._bitcoin-payment\nAnd for the VALUE: \nbitcoin:?lno=<YourBOLT12Code>\n\n✅ \n\nThis will create the address <YourName>@<yourdomain>.com",
+    "timestamp": "1720787007",
+    "date": "7/12/2024, 12:23:27 PM",
+    "id": "10d5201a3135fd51d390422daf8e30db9d04a698c28c82a45f7c745100de8a5d",
+    "kind": 6
+  },
+  {
+    "content": "Just stumbled across nostr:nprofile1qqs0zuj4s6jq9sr2ajqc69rc53d25rwpd3afcjrfm97r2qek69hcuscpzpmhxue69uhkummnw3ezumt0d5hs3td67d npub, definitely give him a follow, highest quality signal! ",
+    "timestamp": "1720786688",
+    "date": "7/12/2024, 12:18:08 PM",
+    "id": "44a8514f7e8ad06325276a018ebdb127db5b9cbf879cd8184fa7f0d8f13f7539",
+    "kind": 1
+  },
+  {
+    "content": "#dev #CLN\n\nI've spent the last few workdays completely reworking our onion message code.  This was scattered in various places and I wanted to unify it, and also written several years ago and I'd forgotten how the protocol actually works!\n\nonion messages are *double* encrypted; this is the main source of confusion!  At the high layer, they're a series of nested encrypted calls (\"onionmsg_tlv\" in the BOLT 4 spec), so each recipient decrypts and hands it on: this is exactly the same as we use for payment information.  But inside that is *another* encrypted blob (onionmsg_tlv.encrypted_recipient_data), which requires a tweak which was handed to you alongside the onion, for you to decrypt (into an \"encrypted_data_tlv\").  Inside that is all the information about where to send next, any restrictions, and allows you to calculate the *next* tweak to hand on (it can also override the next tweak).\n\nThe double encryption is necessary because there are *three* actors here: Alice wants Bob to send her a message, without revealing her identity. So she gives Bob a \"blinded path\" which goes via Charlie: this path contains Charlie's pubkey (where to start the path), a blinding tweak, and two encrypted blobs for Alice to put into each layer of the onion message.  The first an encrypted blob which Charlie can read, which contains her pubkey so he knows where to send it next.  The second is her own, and contains a secret specific to the purpose of this message, so Bob can't play games trying to use this blinded path for anything else (\"hey, are you the same node as this previous payment?\") or use a different blinded path for this purpose.  She can also add dummy hops (we don't yet), which she will simply absorb, to obscure the path length from Bob.  You can add padding to make the hops indistinguishable (we don't yet).\n\nBob puts the actual stuff he wants to send Alice into the final onion call (often including his own blinded reply path!), along with the encrypted blob.\n\nImportantly, even if Bob were sending a message *not through a blinded path* he would use the same double-encrypted format: that's so Charlie can't tell whether a blinded path is being used or not, even though it's slightly less efficient.  Crypto is cheap these days, too.\n\nNow, if Alice gives Bob a blinded path to Charlie and Charlie is Bob's peer, he can simply send the onion and the first blinding tweak to Charlie.  But if Alice needs to send the message via Dave to Charlie, she needs to prepend a step.  That's not quite possible, naively, because blinding tweaks are generated *forwards*, and she needs Charlie to get the right blinding tweak from Dave, and Alice has no way of making that happen.  So inside Dave's encrypted blob, she uses next_blinding_override to tell Dave to hand that blinding override to Charlie instead of the normal one.  I just implemented this for Core Lightning (previously we would simply connect to the first node, which is privacy-compromising and should only be done as a last resort).\n\nThese blinded paths have some nice properties: you can't use part of them (you don't know the blinding factor except for the first one, so you can't start in the middle, and you can't replace any data), you need to use all of them.  They can contain timelimits to avoid easy probing, too: a classic measure would be to see if the path fails when a given node is down, but that takes time.  The spec insists all errors within the blinded path are the same, and originate from the entry: this loses some analytical power on failure, but makes probing harder.  The entry point is supposed to add a random delay (we don't yet!).  There may still be implementation differences, but they're hard for Bob to probe (and Alice doesn't need to, as she set up the path).\n",
+    "timestamp": "1720786639",
+    "date": "7/12/2024, 12:17:19 PM",
+    "id": "253a2cd032e1db742852bfdc39620fcd9821c8ec6dfa0509fff0f773798bb87d",
+    "kind": 6
+  },
+  {
+    "content": "Excellent pod about many security vulnerabilities in Bitcoins history. \n\nhttps://podcastindex.org/podcast/4473671?episode=24966944150",
+    "timestamp": "1720769107",
+    "date": "7/12/2024, 7:25:07 AM",
+    "id": "fea7ba1ad8a480348ac54fd9844253bf3f29837549f3bda1713dac99c0f6422d",
+    "kind": 1
+  },
+  {
+    "content": "Freedom tech relies on users stepping up and contributing wherever they can. \n\nIf you're a dev, consider reviewing some open PRs. If you're a writer, publish a blog or post on forums. If you're a teacher, teach others why it's important tech. If you're an uncle Jim, help others to install and set everything up.\n\nAnd regardless of who you are, consider sending financial support as well. Most contributors to freedom tech would earn insanely more money if they worked in slave tech. \n\nIt's your moral obligation to support the people who work on the tools of your liberation. ",
+    "timestamp": "1720768086",
+    "date": "7/12/2024, 7:08:06 AM",
+    "id": "b3920e29b7ec839f4dc58c73a25f211fac948e414e7d8e37c3114206a740d870",
+    "kind": 1
+  },
+  {
+    "content": "GrapheneOS really is an exemplary free and open source software project. \n\nBuilding ontop of a FOSS base, adding numerous security and privacy hardening features, contributing to upstream dependencies with countless vulnerability disclosures and shipping patches to fix upstream bugs.\n\nThanks to all contributors! ",
+    "timestamp": "1720768001",
+    "date": "7/12/2024, 7:06:41 AM",
+    "id": "a67555c53c069c8476ae218a1c05ddabcf5220523e645b623acb2cf1f0ad0aa8",
+    "kind": 1
+  },
+  {
+    "content": "Today we are excited to release \"Autoswap\", which fully automates liquidity management for your Lightning node using Liquid  🚀\n\nDive into our guide, walking you through how it works and how to set it up 👇\n\nhttps://blog.boltz.exchange/p/guide-how-to-use-boltz-clients-autoswap",
+    "timestamp": "1720727019",
+    "date": "7/11/2024, 7:43:39 PM",
+    "id": "c37f7e8c5f7476b70cef51de32e81d7d4e8cdecb650110032dfbffc19feaf1a9",
+    "kind": 6
+  },
+  {
+    "content": "\"🧪 Phoenix now supports BIP-353 LN addresses\n\nTo create your address (must have a channel):\n- android: Settings > Experimental features\n- ios: soon™\n- server: ./phoenix-cli getlnaddress\n\nPhoenix (android/ios/server) can all send to both BIP-353 and LNURL addresses\"\n\nhttps://x.com/PhoenixWallet/status/1811442125801705638\n\nNow we just need nostr zaps support for BIP-353.. ",
+    "timestamp": "1720726857",
+    "date": "7/11/2024, 7:40:57 PM",
+    "id": "63f4d0f4eb384a21795ce5a27f3baf6882a8656b6f520ad5a84860d05b67bfd1",
+    "kind": 6
+  },
+  {
+    "content": "Yeah, it takes a while until the mosaic of the story gets together, but I think there is fascinating dialog right from the start. ",
+    "timestamp": "1720721661",
+    "date": "7/11/2024, 6:14:21 PM",
+    "id": "6b3add95bc4911be7224cd5f63d842cdc349204dd910b3f5c473c44371ad26a7",
+    "kind": 1
+  },
+  {
+    "content": "What do you not get? ",
+    "timestamp": "1720720948",
+    "date": "7/11/2024, 6:02:28 PM",
+    "id": "3f050efb87d7ccf114340376088150015362c5b53613a3ed8bf5b9e122159478",
+    "kind": 1
+  },
+  {
+    "content": "I'm done with recording chapter 1!\n\nnostr:nprofile1qqswrmfr6c0u6j6d34jh8sydcxwe20eeufv4hkk739auh2h9yejfqpqpr4mhxue69uhkummnw3ezucnfw33k76twv4ezuum0vd5kzmp0qyvhwumn8ghj7mrfva58gmnfdenhyetvv9ujucm0d5hszythwden5te0dehhxarj9emkjmn99uy07x2f will do the edit, and we'll publish chapter by chapter as soon as it's done.\n\nIf you haven't yet read The Lodging of Wayfaring Men, stay tuned, you're in for a treat. \n\nnostr:nevent1qqsg59lgp5gka6q2u4ue0nar39v4jjy5ua9prenwtevv8f9gcjjwargpremhxue69uhkummnw3ez6ur4vgh8wetvd3hhyer9wghxuet59upzpdlddzcx9hntfgfw28749pwpu8sw6rj39rx6jw43rdq4pd276vhuqvzqqqqqqy22ksdm",
+    "timestamp": "1720713688",
+    "date": "7/11/2024, 4:01:28 PM",
+    "id": "d54e0ba6698a9a11c4aaff4dcf59c1e9bdf7cb5a2c27238ce2050dc64ea649ef",
+    "kind": 1
+  },
+  {
+    "content": "The level of attack against freedom tech is escalating, brace yourself.\n\nnostr:nevent1qqsqqqyr9kq6ajn7srdwmkdzqsupanw82l9qeyrpknxz0hkv08l0haspzpmhxue69uhkummnw3ezumt0d5hsygy7xr55qguvm847h33js9md6ngsnqfp99zz72nv8pe8l3n05l4fpgpsgqqqqqqs0hpm5q",
+    "timestamp": "1720625226",
+    "date": "7/10/2024, 3:27:06 PM",
+    "id": "4d44cc5fbbba5677edc7202bf89c12f79cda3f199448cd3149555cbfdef74ec2",
+    "kind": 1
+  },
+  {
+    "content": "Can we increase the max limit of requests, or make it dynamic? ",
+    "timestamp": "1720616726",
+    "date": "7/10/2024, 1:05:26 PM",
+    "id": "81ac849b8f9076f2a0801082be8b262a50440cb2e223b36e60ceb4c754b425d0",
+    "kind": 1
+  },
+  {
+    "content": "Yeah, but the DVM feed stops after a few posts, an endless scroll would be nice. ",
+    "timestamp": "1720605429",
+    "date": "7/10/2024, 9:57:09 AM",
+    "id": "75e62a2c3857fe73627eff2d84825cd2aefa104ec153bd56444324b2ffd1e299",
+    "kind": 1
+  },
+  {
+    "content": "Is there a way to get the Nostr Band or Primal trending feeds in Amethyst? \nnostr:nprofile1qqsyvrp9u6p0mfur9dfdru3d853tx9mdjuhkphxuxgfwmryja7zsvhqpzamhxue69uhhv6t5daezumn0wd68yvfwvdhk6tcpz9mhxue69uhkummnw3ezuamfdejj7qgwwaehxw309ahx7uewd3hkctcscpyug",
+    "timestamp": "1720595420",
+    "date": "7/10/2024, 7:10:20 AM",
+    "id": "1f958812bf85797ee8fffb670f4578993e6d5c8b5a6f9ce603c1dc37fed317f2",
+    "kind": 1
+  },
+  {
+    "content": "Looking forward to hearing this conversation. \n\nnostr:nevent1qqsfkn4lq3nqfru5r7346ra2em6d0yq3rvgxyplfmkqehj0lh3khvgcppemhxue69uhkummn9ekx7mp0qgsgnc2tuj0dqpea4qak0qnee55m5kkcdncqpd4r6xjv8hz25n7aqtqrqsqqqqqpnfxwfn",
+    "timestamp": "1720595283",
+    "date": "7/10/2024, 7:08:03 AM",
+    "id": "0a087bc6c9c8bdc46ad57208e3cdb435cb6061e220b191557b5fdb72d502e84a",
+    "kind": 1
+  },
+  {
+    "content": "Because most surveillance is done by outlaws.\n\nInstead we must build easy and cheap to use  defensive privacy technologies. (which funnily will be outlawed) ",
+    "timestamp": "1720595153",
+    "date": "7/10/2024, 7:05:53 AM",
+    "id": "c95079d787056cf93d1e1e38b7e29162ec4dde8ee560bb67c2a6333c5eb05b97",
+    "kind": 1
+  },
+  {
+    "content": "Breakfast literally means to break a fast, only dead people can skip breakfast, you just delay it a bit.",
+    "timestamp": "1720594633",
+    "date": "7/10/2024, 6:57:13 AM",
+    "id": "2c2102324cd467cc7210e451f5cfe4b5289264fddae020c8ed14d16527cf074d",
+    "kind": 1
+  },
+  {
+    "content": "That's the plan. \n",
+    "timestamp": "1720593363",
+    "date": "7/10/2024, 6:36:03 AM",
+    "id": "c841f32de2b6cc74144b4369cf594e5b1ddde2b9ed04cba837e9c486e47a240a",
+    "kind": 1
+  },
+  {
+    "content": "Almost done with recording chapter one! \n\nnostr:nevent1qqsg59lgp5gka6q2u4ue0nar39v4jjy5ua9prenwtevv8f9gcjjwargpremhxue69uhkummnw3ez6ur4vgh8wetvd3hhyer9wghxuet59upzpdlddzcx9hntfgfw28749pwpu8sw6rj39rx6jw43rdq4pd276vhuqvzqqqqqqy22ksdm",
+    "timestamp": "1720558021",
+    "date": "7/9/2024, 8:47:01 PM",
+    "id": "314e736e66d6daa40bd0f66e9a83523bd95cae181435915838986cf117c49bac",
+    "kind": 1
+  },
+  {
+    "content": "nostr:nprofile1qqs04xzt6ldm9qhs0ctw0t58kf4z57umjzmjg6jywu0seadwtqqc75spzpmhxue69uhnzdps9enrw73wd9hszynhwden5te0wp6hyurvv4cxzeewv4eszynhwden5te0wfjkccte9enrw73wd9hsxv8qkt is the notes while you were gone DVM down? ",
+    "timestamp": "1720523810",
+    "date": "7/9/2024, 11:16:50 AM",
+    "id": "63a8b0c8eeb729e01ba236349674388702b4e5c8bb23b88ec07f19316f34757a",
+    "kind": 1
+  },
+  {
+    "content": "*not yet",
+    "timestamp": "1720471856",
+    "date": "7/8/2024, 8:50:56 PM",
+    "id": "86463143a0979f8d94a259b2b320b7c2241215d3841e09db39640e62bcb3ab42",
+    "kind": 1
+  },
+  {
+    "content": "Wasabi's Buy Anything Button ",
+    "timestamp": "1720470650",
+    "date": "7/8/2024, 8:30:50 PM",
+    "id": "90ee7392bc7cef31bd68ce7600e7d842a0733ad3ce8baa86d6c40b41538dd9ee",
+    "kind": 1
+  },
+  {
+    "content": "Yeah, wild adventure. ",
+    "timestamp": "1720451618",
+    "date": "7/8/2024, 3:13:38 PM",
+    "id": "9c5945944ecea7ac31a0f53d74e7250db9b086e7deb528d5b6a04ec13be8652e",
+    "kind": 1
+  },
+  {
+    "content": "Good old times\nhttps://www.youtube.com/watch?v=HfHgzPtj90U",
+    "timestamp": "1720449412",
+    "date": "7/8/2024, 2:36:52 PM",
+    "id": "46e1796c72297e77dcd4e7b6d91441b2840293cfc129fcd25d90af4472f0d62b",
+    "kind": 1
+  },
+  {
+    "content": "Humans can reverse entropy willfully. ",
+    "timestamp": "1720445821",
+    "date": "7/8/2024, 1:37:01 PM",
+    "id": "c35728950326b9310a08367014af0b0906aa944bc22119e265bda2643b9e93d0",
+    "kind": 1
+  },
+  {
+    "content": "Work is recreating the world according to our will. ",
+    "timestamp": "1720444966",
+    "date": "7/8/2024, 1:22:46 PM",
+    "id": "a922de560f0057645639196e7ebdb127cb5434614638b475c350a40234efd532",
+    "kind": 1
+  },
+  {
+    "content": "AML/CFT laws make you less safe. Not more.\n\nIn 2022, 78% of European banks experienced a data breach. Yet AML/CFT laws continue to attempt to mandate increasing amounts of data collection, from IP Addresses to social media activities. This data is routinely targeted, exploited, and sold on dark markets.\n\nIn honor of gigabrain takes like \"We NeEd SuRrVeiLlAnCe To FiGhT CrImE\", this Rage Weekly I compiled a list of 40+ recent data breaches involving the leak of personal data – just in case anyone tries to tell you that increased surveillance leads to an increase in security.\n\nFull list 👉 https://www.therage.co/rage-weekly-data-breach-special/",
+    "timestamp": "1720443443",
+    "date": "7/8/2024, 12:57:23 PM",
+    "id": "73fdc4d3c3b0ec549a9773a25ac6eb019d48a412ad19a5c93d3b6c37609ceb9f",
+    "kind": 6
+  },
+  {
+    "content": "I've been for five years on a no-bank bitcoin standard. \nMaybe it's time to do radical value for value next.",
+    "timestamp": "1720443417",
+    "date": "7/8/2024, 12:56:57 PM",
+    "id": "e7f27ed047a8f58ca1e9d430f9cc04073a30fc9246e639b504f9fcd8cad7518c",
+    "kind": 1
+  },
+  {
+    "content": "True. \n\nIt's just that when there's more than 10 there's simply no excuse anymore. ",
+    "timestamp": "1720442921",
+    "date": "7/8/2024, 12:48:41 PM",
+    "id": "de3e967aea2cb09476fe5616111e79e0c5e5fa0e08d0c427e58fcaff10d9d2d4",
+    "kind": 1
+  },
+  {
+    "content": "Dolphin llama 3 70b is great ",
+    "timestamp": "1720438837",
+    "date": "7/8/2024, 11:40:37 AM",
+    "id": "e6dae70af92a716f4d1cb6cc2fa0679e3cbc5150ad676398a3c92ce166ab7da9",
+    "kind": 1
+  },
+  {
+    "content": "If there are more than 10 bitcoiners in your close vicinity, you ought to start a regular meeting.",
+    "timestamp": "1720438772",
+    "date": "7/8/2024, 11:39:32 AM",
+    "id": "1f099f3dfb7a4e4cc9dc53e63ff17d6e8943521be23309acb816518aa17bc7ad",
+    "kind": 1
+  },
+  {
+    "content": "\"those who give up essential privacy for number go up will get none of them in the long run\"\n\n... inspired by the latest episode of nostr:npub14kw5ygpl6fyqagh9cnrytyaqyacg46lzkq42vz7hk8txdk49kzxs04j7y0 feat. nostr:npub1klkk3vrzme455yh9rl2jshq7rc8dpegj3ndf82c3ks2sk40dxt7qulx3vt 🔥\n\n#plebchain #deepstr #PrivacyGoUp\n\nhttps://fountain.fm/episode/ATkyeNluMY2138QbZO5E",
+    "timestamp": "1720435266",
+    "date": "7/8/2024, 10:41:06 AM",
+    "id": "679d0a1a0b08b84320f175055f8fff6b009d100056daee46da56cbac92352728",
+    "kind": 6
+  },
+  {
+    "content": "Here's a beautiful talk by the author, gives you a glimpse of the spirit of the book. \n\nhttps://www.youtube.com/watch?v=Sz-vG4FG1tY\n\nnostr:nevent1qqsg59lgp5gka6q2u4ue0nar39v4jjy5ua9prenwtevv8f9gcjjwargpremhxue69uhkummnw3ez6ur4vgh8wetvd3hhyer9wghxuet59upzpdlddzcx9hntfgfw28749pwpu8sw6rj39rx6jw43rdq4pd276vhuqvzqqqqqqy22ksdm",
+    "timestamp": "1720425552",
+    "date": "7/8/2024, 7:59:12 AM",
+    "id": "434bed42e3542734aa4c6099649b87ea1907da19a8c8e691962be6260147770a",
+    "kind": 1
+  },
+  {
+    "content": "Not sure if you can build anything fancy for 2k sats though... ",
+    "timestamp": "1720423696",
+    "date": "7/8/2024, 7:28:16 AM",
+    "id": "bc00e63b2e08e5be591b13acbf6653b1eb42adb886778d601a6ca1cdbcfb969d",
+    "kind": 1
+  },
+  {
+    "content": "So how is Silent Payments going? nostr:npub1art8cs66ffvnqns5zs5qa9fwlctmusj5lj38j94lv0ulw0j54wjqhpm0w5 and me asked Ruben and Josie for an update: https://bitcoinexplainedpodcast.com/@nado/episodes/episode-94-silent-payments-part-2",
+    "timestamp": "1720423619",
+    "date": "7/8/2024, 7:26:59 AM",
+    "id": "63baa049cb1def31d12df301dee712416effd49712bd437e17b0b4bb53cb44cd",
+    "kind": 6
+  }
+]

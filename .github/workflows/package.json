@@ -1,0 +1,22 @@
+{
+  "name": "linkcollector",
+  "version": "1.0.0",
+  "description": "Collect datas from links",
+  "type": "module",
+  "main": "collect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "collect": "node collect.js",
+    "nostr": "node nostr.js"
+  },
+  "author": "Gabor Bali",
+  "license": "MIT",
+  "dependencies": {
+    "bech32": "^2.0.0",
+    "cheerio": "^1.0.0-rc.12",
+    "node-fetch": "^3.3.2",
+    "nostr": "^0.2.8",
+    "nostr-fetch": "^0.15.1",
+    "nostr-tools": "^2.7.1"
+  }
+}
