@@ -33,11 +33,11 @@ jobs:
 
     - name: Add and commit changes
       run: |
-        git config --global user.email "baligabor81@gmail.com"
-        git config --global user.name "Baligabor"
+        git config --global user.email "max@towardsliberty.com"
+        git config --global user.name "MaxHillebrand"
         git add .
         git commit -m "Add collected data"
-        git push https://${{ secrets.NEWDEPLOY }}@github.com/Baligabor/collectlinkdata.git
+        git push https://${{ secrets.NEWDEPLOY }}@github.com/MaxHillebrand/towardsliberty.git
     ## git push origin main
       
     ##- name: Deploy to GitHub
