@@ -1,5 +1,13 @@
 [
   {
+    "link": "https://www.youtube.com/playlist?list=PLPj3KCksGbSZG8f4_ubui5I1VB7VGX2Cy",
+    "title": "Wasabi Wallet Zero Link Framework Reading - YouTube",
+    "description": "Wasabi is an open-source, non-custodial, privacy focused Bitcoin wallet, that implements trustless coin shuffling with mathematically provable anonymity: Cha...",
+    "ogimage": "https://i.ytimg.com/vi/03Xy6UCdMyI/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLA0goj7EefpdFbYcYwhS_oWEpiL1g&days_since_epoch=19943",
+    "category": "Bitcoin",
+    "type": "Video, Audiobook"
+  },
+  {
     "link": "https://www.youtube.com/watch?v=IQb3WtiY9sI",
     "title": "Max Hillebrand - How To Make Privacy Convenient (BTC Prague 2023 Keynote) - YouTube",
     "description": "Privacy is necessary for a free and prosperous society. Unfortunately, on-chain financial privacy is not default and that's why we have to use certain tools ...",

@@ -1,5 +1,12 @@
 [
   {
+    "content": "Imagine a BTCPayServer point of sale receiving Cashu ecash to the merchant's Lightning wallet. \n\n- no rug risk for merchant\n- can accept ecash from a million different mints\n- merchant pays LN fees\n- users can remain offline while paying\n\nEcash is Bitcoin's credit card killer.",
+    "timestamp": "1723116463",
+    "date": "8/8/2024, 11:27:43 AM",
+    "id": "d4e3644490094e280a1b9a8233e09cf7e5594e11601ade806d67ddc9ebb30dee",
+    "kind": 6
+  },
+  {
     "content": "Evil is the lack of thought.",
     "timestamp": "1723018994",
     "date": "8/7/2024, 8:23:14 AM",
