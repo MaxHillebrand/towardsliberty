@@ -1,5 +1,10 @@
 [
     {
+        "link": "https://www.youtube.com/watch?v=IQb3WtiY9sI",
+        "category": "Bitcoin",
+        "type": "Video"
+    },
+    {
         "link": "https://www.youtube.com/playlist?list=PLPj3KCksGbSbx7WQMTJAG6wLd4tK9Llr9",
         "category": "Bitcoin",
         "type": "Video",
